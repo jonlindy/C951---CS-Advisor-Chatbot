@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <!-- Default response for unrecognized input -->
+  <category>
+    <pattern>^.*</pattern>
+    <template>
+      I'm sorry, I didn't understand your response. Please answer with an appropriate response. 
+    </template>
+  </category>
+
+  <!-- Start of the career choice conversation -->
+  <category>
+    <pattern>START</pattern>
+    <template>
+      Hello! I am your own personal career assistant. I can help you find a suitable career with your Computer Science degree! <br></br>
+      Let's get started. Do you enjoy programming?
+      <button>
+                <text>Yes</text>
+                <postback>programming</postback>
+      </button>
+      <button>
+                <text>No</text>
+                <postback>data</postback>
+            </button>
+    </template>
+  </category>
+
+  <!-- Response to the question about working with computers -->
+  <category>
+    <pattern>programming</pattern>
+    <template>
+      Groovy! Do you enjoy thinking logically and working with data structures? Or are you more creative and interested in user interface design?
+      <button>
+                <text>Logical</text>
+                <postback>backend</postback>
+      </button>
+      <button>
+                <text>Design</text>
+                <postback>frontend</postback>
+      </button>
+    </template>
+  </category>
+
+  <category>
+    <pattern>data</pattern>
+    <template>
+      Okay. Do you enjoy managing and manipulating data?
+      <button>
+                <text>Yes</text>
+                <postback>datajobs</postback>
+      </button>
+      <button>
+                <text>No</text>
+                <postback>cyber</postback>
+      </button>
+    </template>
+  </category>
+
+  <!-- Response to the question about working with people or independently -->
+  <category>
+    <pattern>backend</pattern>
+    <template>
+      You might enjoy a career as a Backend Engineer! Backend often deals with data, databases, and server-side logic. <br></br>
+      People who enjoy solving complex problems logically and efficiently may fancy backend development.
+      <button>
+                <text>Run it back</text>
+                <postback>START</postback>
+      </button>
+      <button>
+                <text>End chat session</text>
+                <postback>endchat</postback>
+      </button>
+    </template>
+  </category>
+
+  <category>
+    <pattern>frontend</pattern>
+    <template>
+      You might enjoy a career as a Frontend Engineer! Frontend or User Interface / User Experience (UI/UX) involves creating the user interface and user experience of websites and applications. <br></br> 
+      If you're interested in designing visual appealing and intuitive UI's, Frontend is right up your alley!
+      <button>
+                <text>Run it back</text>
+                <postback>START</postback>
+      </button>
+      <button>
+                <text>End chat session</text>
+                <postback>endchat</postback>
+      </button>
+    </template>
+  </category>
+
+
+
+
+
+
+
+  <!-- Response to the question about working with numbers and data -->
+  <category>
+    <pattern>datajobs</pattern>
+    <template>
+      I have a couple ideas for you data-lovers.. <br></br> Are you interested in analyzing information and presenting findings? <br></br>
+      Or would you more interested in managing data to ensure integrity, security, and performance?
+      <button>
+                <text>Data Analysis</text>
+                <postback>dataAnalyst</postback>
+      </button>
+      <button>
+                <text>Data Management </text>
+                <postback>dataMgmt</postback>
+      </button>
+      <button>
+                <text>Neither</text>
+                <postback>cyber</postback>
+      </button>
+      
+    </template>
+  </category>
+
+  <category>
+    <pattern>dataAnalyst</pattern>
+    <template>
+      Nice! You might enjoy a career as a data analyst! <br></br>
+      A data analyst gathers, cleans, analyzes, and visualizes data to extract actionable insights that inform decision-making and drive business improvements.<br></br>
+      Data Analytics is a fast growing field, projected to grow ~25% by 2030!
+      <button>
+                <text>Run it back</text>
+                <postback>START</postback>
+      </button>
+      <button>
+                <text>End chat session</text>
+                <postback>endchat</postback>
+      </button>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>dataMgmt</pattern>
+    <template>
+      Alright! You might enjoy a career as a database administrator(DBA)! <br></br>
+      A DBA manages and maintains databases, ensuring data integrity, availability, security, and optimal performance for an organization's information systems.
+      <button>
+                <text>Run it back</text>
+                <postback>START</postback>
+      </button>
+      <button>
+                <text>End chat session</text>
+                <postback>endchat</postback>
+      </button>
+    </template>
+  </category>
+
+  <category>
+    <pattern>cyber</pattern>
+    <template>
+      Okay. Perhaps you're interested in protecting digital assests from cyberspace threats?
+      <button>
+                <text>Yes</text>
+                <postback>cyberYes</postback>
+      </button>
+      <button>
+                <text>No</text>
+                <postback>seekhelp</postback>
+      </button>
+    </template>
+  </category>
+
+  <!-- Response to the question about administrative roles -->
+  <category>
+    <pattern>cyberYes</pattern>
+    <template>
+      You might excel in cybersecurity! <br></br>
+      A cybersecurity analyst safeguards an organization's digital assets by monitoring, detecting, and responding to security threats and vulnerabilities to protect against cyberattacks and data breaches.
+      <button>
+                <text>Run it back</text>
+                <postback>START</postback>
+      </button>
+      <button>
+                <text>End chat session</text>
+                <postback>endchat</postback>
+      </button>
+    </template>
+  </category>
+
+  <category>
+    <pattern>seekhelp</pattern>
+    <template>
+      I see. Based on your answers, you have a wide range of interests. It might be helpful to speak with a career counselor for personalized advice.
+      <button>
+                <text>Run it back</text>
+                <postback>START</postback>
+      </button>
+      <button>
+                <text>End chat session</text>
+                <postback>endchat</postback>
+      </button>
+      
+    </template>
+  </category>
+    <category>
+        <pattern>endchat</pattern>
+        <template>I hope I was helpful in finding you the right career fit. I wish you the best in this adventure!</template>
+    </category>
+    </aiml>
